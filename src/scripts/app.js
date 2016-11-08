@@ -15,25 +15,25 @@ storeApp.config(['$stateProvider',function($stateProvider){
   $stateProvider
   .state('index.welcome',{
     url:'/welcome',
-    templateUrl: '/partials/welcome.html',
+    templateUrl: '/angular/partials/welcome.html',
     controller: welcomeController
   })
     .state('login',{
       url:'/login',
-      templateUrl:'/partials/login.html',
+      templateUrl:'/angular/partials/login.html',
       controller: loginController
       //controllerAs:'loginCtrl'
     })
     .state('index',{
       url:'/index',
-      templateUrl: '/partials/index.html',
+      templateUrl: '/angular/partials/index.html',
       controller: indexController
       // controllerAs:'indexCtrl'
     })
 
     .state('index.main',{
       url:'/main',
-      templateUrl: '/partials/store.html',
+      templateUrl: '/angular/partials/store.html',
       controller: mainController,
       //controllerAs:'mainCtrl'
     })
