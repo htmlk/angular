@@ -1,0 +1,84 @@
+<ol class="breadcrumb">
+    <li><a>首页</a></li>
+    <li><a>进口水果</a></li>
+    <li class="active">苹果</li>
+</ol>
+<div class="alert alert-warning alert-dismissible" role="alert">
+  <button type="button" class="close" data-dismiss="alert"><span aria-hidden="true">&times;</span><span class="sr-only">Close</span></button>
+  <strong>编辑员您好!</strong> 你有新的消息需要处理！！！<a>立即查看</a>
+</div>
+<div class="container-fluid">
+    <form class="navbar-form navbar-left" role="search">
+        <div class="form-group">
+            <lable></lable>
+            <input type="text" class="form-control" ng-change="filterchange($event)" ng-model="filtervalue" placeholder="商品编号/名称关键字">
+        </div>
+        <button type="submit" class="btn btn-default">搜索商品</button>
+
+        <!-- Standard button -->
+        <button type="button" class="btn btn-primary">高级搜索</button>
+        <!-- Large modal -->
+        <!-- Indicates a successful or positive action -->
+        <button type="button" class="btn btn-success" data-toggle="modal" data-target="#myModal" ng-click="addgoodbtn()">添加商品</button>
+
+        <!-- Contextual button for informational alert messages -->
+        <button type="button" class="btn btn-info">查看选中</button>
+
+        <!-- Indicates caution should be taken with this action -->
+        <button type="button" class="btn btn-warning">修改选中</button>
+
+        <!-- Indicates a dangerous or potentially negative action -->
+        <button type="button" class="btn btn-danger" ng-click="deleteAll()">全选删除</button>
+    </form>
+</div>
+
+
+
+<div class="table-responsive">
+    <table class="table  table-bordered table-hover">
+        <tr>
+            <th>
+                <input type="checkbox" ng-model="checkAll" ng-click="checkclick()">
+            </th>
+            <th>商品id</th>
+            <th>商品编号</th>
+            <th>商品名称</th>
+            <th>原价格</th>
+            <th>现价格</th>
+            <th>规格</th>
+            <th>图片</th>
+            <th>操作</th>
+        </tr>
+        <tr ng-repeat="item in list | filter:listfilter">
+            <td><input type="checkbox" ng-model="checkbool" ng-click="checkinput($event,item.id)"></td>
+            <td>{{item.id}}</td>
+            <td>{{item.SpecId}}</td>
+            <td>{{item.CommodityName}}</td>
+            <td>{{item.CommodityPrice}}元</td>
+            <td>{{item.OriginalPrice}}元</td>
+            <td>{{item.Spec}}</td>
+            <td><img class="img-responsive" ng-src="{{item.SmallPic}}" width="20" alt=""/></td>
+            <td>
+            <a ng-click="changegood($event)" data-id="{{item.CommodityId}}" data-toggle="modal" data-target="#myModal">修改</a>
+            <a ng-click="deletegood($event)" data-id="{{item.CommodityId}}">删除</a>
+          </td>
+        </tr>
+
+      </table>
+      <!-- 分页 -->
+</div>
+<div class="container">
+  <nav>
+  <ul class="pagination">
+  <li><a ng-click="pagePrev()">&laquo;</a></li>
+  <li ng-repeat="page in pagesum" ng-class="(pageIndex==page)?'active':''">
+    <a ng-click="pageindex(page)">{{page}}</a>
+  </li>
+
+  <li><a ng-click="pageNext()">&raquo;</a></li>
+</ul>
+  </nav>
+</div>
+
+
+<bootmodel></bootmodel>

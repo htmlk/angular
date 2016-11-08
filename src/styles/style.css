@@ -1,0 +1,16 @@
+body,html{
+  height: 100%;
+  width: 100%;
+}
+body{
+  height: 100%;
+  width: 100%;
+  font-size: 12px;
+  /*background: url('http://img06.yiguoimg.com/e/others/161102/9288698230055266.jpg') no-repeat;
+  background-size: 200% 100%;*/
+
+}
+.jumbotron{
+    padding:8rem 5rem;
+    background: url('http://img06.yiguoimg.com/e/others/161102/9288698230055266.jpg') no-repeat;
+}

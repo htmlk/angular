@@ -1,0 +1,83 @@
+
+    <nav class="navbar navbar-default" role="navigation">
+        <div class="container-fluid">
+
+
+            <!-- Brand and toggle get grouped for better mobile display -->
+            <div class="navbar-header">
+                <button type="button" class="navbar-toggle collapsed" data-toggle="collapse" data-target="#bs-example-navbar-collapse-1">
+                    <span class="sr-only">Toggle navigation</span>
+                    <span class="icon-bar"></span>
+                    <span class="icon-bar"></span>
+                    <span class="icon-bar"></span>
+                </button>
+                <a class="navbar-brand">易果生鲜后台管理</a>
+            </div>
+
+            <!-- Collect the nav links, forms, and other content for toggling -->
+            <div class="collapse navbar-collapse" id="bs-example-navbar-collapse-1">
+
+                <ul class="nav navbar-nav">
+                    <li class="active"><a ui-sref="employeeParent.employee">系统首页</a></li>
+                    <li><a>商品管理</a></li>
+                    <li><a>订单管理</a></li>
+                    <li><a>物流管理</a></li>
+                    <li><a>商城会员管理</a></li>
+                    <li><a>系统用户管理</a></li>
+                    <li><a>系统设置</a></li>
+                </ul>
+
+                <ul class="nav navbar-nav navbar-right">
+                    <li><a>用户：<span style="color:red">{{userId}}</span></a></li>
+                    <li><a ng-click="quituser($event)">退出系统</a></li>
+                </ul>
+
+
+            </div>
+            <!-- /.navbar-collapse -->
+        </div>
+        <!-- /.container-fluid -->
+    </nav>
+
+
+    <div class="container-fluid">
+        <div class="row">
+            <div class="hidden-xs  col-md-2">
+
+
+              <div class="list-group">
+                  <a class="list-group-item list-group-item-success">
+                    商品管理
+                  </a>
+                  <a class="list-group-item">商品列表</a>
+                  <a class="list-group-item">商品分类</a>
+                  <a class="list-group-item">图片批量处理</a>
+                  <a class="list-group-item">标签管理</a>
+              </div>
+
+              <div class="list-group">
+                  <a class="list-group-item list-group-item-info">
+                    订单管理
+                  </a>
+                  <a class="list-group-item">订单列表</a>
+                  <a class="list-group-item">订单查询</a>
+                  <a class="list-group-item">订单打印</a>
+                  <a class="list-group-item">缺货登记</a>
+                  <a class="list-group-item">添加订单</a>
+              </div>
+              <div class="list-group">
+                  <a class="list-group-item list-group-item-danger">
+                    物流管理
+                  </a>
+                  <a class="list-group-item">已发货物流</a>
+                  <a class="list-group-item">物流查询</a>
+                  <a class="list-group-item">新增物流</a>
+                  <a class="list-group-item">已到货物流</a>
+              </div>
+
+            </div>
+            <div class="col-md-10">
+                <ui-view></ui-view>
+            </div>
+        </div>
+    </div>

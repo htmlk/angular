@@ -1,0 +1,57 @@
+
+<div class="modal fade" id="myModal" tabindex="-1" role="dialog" aria-labelledby="myModalLabel" aria-hidden="true">
+  <div class="modal-dialog">
+    <div class="modal-content">
+      <div class="modal-header">
+        <button type="button" class="close" data-dismiss="modal"><span aria-hidden="true">&times;</span><span class="sr-only">Close</span></button>
+        <h4 class="modal-title" id="myModalLabel">{{goodtitle}}</h4>
+      </div>
+      <div class="modal-body">
+
+
+        <form role="form">
+          <div class="form-group">
+            <label for="exampleInputEmail1">商品名称</label>
+            <input type="text" class="form-control" ng-model="goodName" placeholder="Name">
+          </div>
+
+          <div class="form-group">
+            <label for="exampleInputEmail1">商品代码</label>
+            <input type="text" class="form-control" ng-model="goodCode" placeholder="Name">
+          </div>
+
+          <div class="form-group">
+            <label for="exampleInputPassword1">商品原价格</label>
+            <input type="text" class="form-control" ng-model="goodOldprice" placeholder="原价格">
+          </div>
+          <div class="form-group">
+            <label for="exampleInputPassword1">商品现价格</label>
+            <input type="text" class="form-control" ng-model="goodNewprice" placeholder="现价格">
+          </div>
+          <div class="form-group">
+            <label for="exampleInputPassword1">商品规格</label>
+            <input type="text" class="form-control" ng-model="goodType" placeholder="规格">
+          </div>
+          <div class="form-group">
+            <label for="exampleInputFile">商品展示图</label>
+            <input type="file" id="exampleInputFile" ng-model="goodPic">
+            <p class="help-block">易果生鲜</p>
+          </div>
+          <div class="checkbox">
+            <label>
+              <input type="checkbox"> 已阅读相关法律文件
+            </label>
+          </div>
+
+        </form>
+
+
+      </div>
+      <div class="modal-footer">
+        <button type="button" class="btn btn-default" data-dismiss="modal">取消</button>
+        <button type="button" class="btn btn-primary" id="addgood" ng-click="addgood($event)" ng-hide="goodshowhide" >添加商品</button>
+        <button type="button" class="btn btn-primary" id="addgood" ng-click="changegoodbyid($event)" ng-show="goodshowhide" >修改商品</button>
+      </div>
+    </div>
+  </div>
+</div>
