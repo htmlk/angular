@@ -1,4 +1,10 @@
 # angular+bootstrap商城后台管理项目
+
+在线项目展示：[http://htmlk.cn/angular/index.html](http://htmlk.cn/angular/index.html)
+（ps：如果打不开可能是停止了在线mysql数据库服务，请自行下载测试）
+账号：htmlk
+密码：htmlk
+
 ## 1.安装环境
 ### 前端页面环境(web service)
 本人使用的是fekit，当让你也可以使用apache，nginx等服务启动
